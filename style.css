@@ -9,8 +9,19 @@
     color: #3283cd;
 }
 .bg-main{
-    background-color: #ecf8fe;
+    background-color: #ecf8fe;   
+}
+.bg-main-2{
+    background-image: url(./images/10001.svg);
+    background-position:center bottom;
+    background-repeat: no-repeat;
 }
 .bg-footer{
     background-color: #2c3748;
+}
+@media screen and (max-width:768px) {
+    .bg-main-2{
+        background-position: bottom;
+    }
+    
 }

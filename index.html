@@ -9,48 +9,49 @@
     <title>SHINE</title>
 </head>
 <body>
-    <header class="flex justify-evenly items-center sticky top-0 bg-main py-8 px-2">
-        <div class="logo">
+    <header class="flex justify-between items-center sticky top-0 bg-main lg:py-4 px-8 py-8 px-4">
+        <div class="logo lg:w-32 w-40">
             <img src="./images/10005.svg" alt="logo">
         </div>
 
         <div class="main">
-            <ul>
-                <li class="inline mx-2"><a href="#" class="header-txt">HOME</a></li>
-                <li class="inline mx-4"><a href="#">SERVICES</a></li>
-                <li class="inline mx-4"><a href="#">FEATURE</a></li>
-                <li class="inline mx-4"><a href="#">TEAM</a></li>
-                <li class="inline mx-4"><a href="#">TESTIMONAL</a></li>
-                <li class="inline mx-4"><a href="#">PRICING</a></li>
-                <li class="inline mx-4"><a href="#">CONTACT</a></li>
+            <ul class="lg:flex gap-8 text-lg text-gray-600 hidden">
+                <li><a href="#" class="header-txt">HOME</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">FEATURE</a></li>
+                <li><a href="#">TEAM</a></li>
+                <li><a href="#">TESTIMONAL</a></li>
+                <li><a href="#">PRICING</a></li>
+                <li><a href="#">CONTACT</a></li>
             </ul>
         </div>
 
-        <button class="border border-blue-200 rounded-full flex justify-center items-center py-2 px-12 hover:bg-white">
+        <button class="lg:border border-blue-300 rounded-full flex justify-center items-center py-2 px-12 hover:bg-white hidden">
             <span class="header-txt">FAQ</span>
         </button>
+
+        <div class="lg:hidden flex text-3xl">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
     <main>
-        <section class="about bg-main py-10 h-screen">
-            <div class="flex flex-col justify-center pt-5 gap-8">
-                <p class="text-4xl font-bold text-center">Startup and SaaS Landing Page <br>Built with TailwindCSS</p>
-                <button>
-                    <span class="header-main px-8 py-2 rounded-full">Download Now</span>
+        <section class="about bg-main bg-main-2 bg-fit h-screen flex justify-center">
+            <div class="flex flex-col gap-6 mt-28 w-full">
+                <p class="lg:text-5xl text-2xl font-bold text-center text-gray-800">Startup and SaaS Landing Page <br>Built with TailwindCSS</p>
+                <button class="py-4">
+                    <span class="header-main lg:px-10 px-4 py-2 text-gray-100 lg:text-lg text-sm rounded-full">Download Now</span>
                 </button>
-            </div>
-            <div class="flex justify-center items-center">
-                <img src="./images/10001.svg" alt="image">
             </div>
         </section>
 
         <section class="services flex items-center justify-center">
             <div class="services-container flex flex-col items-center justify-center py-20 gap-8 ">
-                <div class="text-center mt-10">
+                <div class="text-center mb-10">
                     <span class="font-bold text-4xl">Our Services</span>
                 </div>
     
-                <div class="lg:w-9/12 grid grid-cols-3 gap-4 items-center">
+                <div class="lg:w-10/12 grid lg:grid-cols-3  grid-cols-2 lg:gap-4  gap-6 items-center lg:px-2 px-8">
                     <div class="gap-4">
                         <img src="./images/web-dev.png" alt="logo" class="w-20">
                         <span class="font-bold text-lg">WEB DEVELOPMENT</span>
@@ -102,15 +103,16 @@
             </div>
             
         </section>
+        
 
-        <section class="team">
+        <section class="team flex items-center justify-center">
             <div class="team-container flex flex-col items-center gap-8 justify-center py-20">
                 <div class="text mb-10">
                     <span class="font-bold text-4xl">Our Team</span>
                 </div>
     
-                <div class="grid grid-cols-3 gap-8">
-                    <div class="border shadow-md mx-10">
+                <div class="lg:w-11/12 lg:grid grid-cols-3 flex flex-col lg:gap-4 gap-8">
+                    <div class="border shadow-md">
                         <div class="flex justify-center">
                             <img src="./images/10002.jpg" alt="user">
                         </div>
@@ -121,23 +123,23 @@
                         </div>
                     </div>
     
-                    <div class="border shadow-md mx-10">
+                    <div class="border shadow-md">
                         <div class="flex justify-center">
                             <img src="./images/10003.jpg" alt="user">
                         </div>
                         <div class="content flex flex-col justify-center items-center my-10">
                             <span class="txt-lg font-bold">SARAH DOE</span>
-                            <span class="font-thin text-gray-500">Front-End Developer</span>
+                            <span class="font-thin text-gray-500">Front-End <br>Developer</span>
                         </div>
                     </div>
     
-                    <div class="border shadow-md mx-10">
+                    <div class="border shadow-md">
                         <div class="flex justify-center">
                             <img src="./images/10004.jpg" alt="user">
                         </div>
                         <div class="content flex flex-col justify-center items-center my-10">
                             <span class="txt-lg font-bold">ROB HOPE</span>
-                            <span class="font-thin text-gray-500">Front-End Developer</span>
+                            <span class="font-thin text-gray-500">Front-End <br>Developer</span>
                         </div>
                     </div>
                 </div>
@@ -148,39 +150,36 @@
 
 
     <footer class="flex flex-col bg-footer">
-        <div class="content-2 flex lg:flex-row flex-col items-center justify-center py-8">
-            <div class="lg:w-4/12 flex flex-col gap-4">
-                    <img class="w-2/3 mt-4" src="./Images/10005.svg" alt="logo">
-                    <p class="font-thin text-gray-100">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorum at ut, illum eaque magni omnis enim, ratione commodi magnam dignissimos earum recusandae.
-                    </p>
+        <div class="content-2 lg:w-full w-2/3 lg:ml-0 ml-10 flex lg:flex-row flex-col justify-evenly py-8">
+            <div class="lg:w-4/12 w-full lg:items-center flex flex-col gap-4">
+                <img class="w-48 mt-4" src="./Images/10005.svg" alt="logo">
+                <p class="w-2/3 font-thin text-gray-100 text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorum at ut, illum eaque magni omnis enim.
+                </p>
             </div>
 
-            <div class="lg:w-6/12 flex gap-4 justify-around">
-                <div class="flex lg:flex-row flex-wrap gap-8">
-                    <div class="w-1/2 text-gray-100 font-thin">
-                        <p class="text-xl font-semibold py-2">Company</p>
-                        <ul class="gap-2 flex flex-col text-lg">
-                            <li><a href="#">Press Releases</a></li>
-                            <li><a href="#">Mission</a></li>
-                            <li><a href="#">Strategy</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="text-gray-100 font-thin">
-                        <p class="w-1/2 text-xl font-semibold py-2">About</p>
-                        <ul class="gap-2 flex flex-col text-lg">
-                            <li><a href="#">Career</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Clients</a></li>
-                        </ul>
-                    </div>
-
+            <div class="lg:w-7/12 w-full lg:flex-row lg:justify-between">
+                <div class="lg:w-1/3 w-full font-thin flex flex-col items-start">
+                    <span class="lg:text-2xl text-xl text-white font-bold py-4">Company</span>
+                    <ul class="gap-2 flex flex-col text-gray-100 text-lg">
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">Mission</a></li>
+                        <li><a href="#">Strategy</a></li>
+                    </ul>
                 </div>
 
-                <div class="flex flex-col gap-2 justify-start ">
-                    <span class="text-xl font-bold text-white py-2">Find us on:</span>
-                    <ul class="flex gap-2">
+                <div class="lg:w-1/3 w-full font-thin flex flex-col items-start">
+                    <span class="lg:text-2xl text-xl text-white font-bold py-4">About</span>
+                    <ul class="gap-2 flex flex-col text-gray-100 text-lg">
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Clients</a></li>
+                    </ul>
+                </div>
+
+                <div class="w-full flex flex-col gap-2 justify-start">
+                    <span class="text-xl font-bold text-white py-4">Find us on:</span>
+                    <ul class="flex gap-2 ">
                         <li class="py-3 px-4 rounded-full bg-white"><a href="#" >
                             <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.99764 2.98875H9.64089V0.12675C9.35739 0.08775 8.38239 0 7.24689 0C4.87764 0 3.25464 1.49025 3.25464 4.22925V6.75H0.640137V9.9495H3.25464V18H6.46014V9.95025H8.96889L9.36714 6.75075H6.45939V4.5465C6.46014 3.62175 6.70914 2.98875 7.99764 2.98875Z" fill="currentColor"></path>
@@ -202,17 +201,17 @@
                             </svg>
                         </a></li>
                     </ul>
-
+    
                 </div>
+
+                
                     
             </div>
-
-           
         </div>
 
         <div class="content-3 flex lg:flex-row flex-col py-8 justify-center border-t border-gray-500">
             <div class="text-center text-gray-300">
-                <p>Designed and Developed by TailwindTemplates and UIdeck</p>
+                <p>Designed and Developed by <br> TailwindTemplates and UIdeck</p>
             </div>
         </div>
     </footer>
